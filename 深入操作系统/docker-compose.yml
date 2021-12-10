@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  gcc:
+    container_name: gcc_test
+    image: alpine
+    build: ./
+    volumes:
+      - ".:/data"
+    ports:
+      - 8080:8080
+    tty: true
