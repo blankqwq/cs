@@ -1,12 +1,11 @@
-CC = make
+MAKE = make
+SUBDIRS = $(ls -l | grep ^d | awk '{print $9." "}')
 
+$(SUBDIRS): 
+	for dir in $(SUBDIRS); do \
+		@+$(MAKE) -C $$dir; \
+	done
 
-all: 22
-
-22: 22-netprog2
-	(cd 22-netprog2; make)
-	(cd 22-netprog2/tiny; make)
-
-clean:
-	(cd 22-netprog2; make clean)
-	(cd 22-netprog2/tiny; make clean)
+clean:$(SUBDIRS)
+	
+	$(MAKE) -C  clean

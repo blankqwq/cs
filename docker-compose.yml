@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  csapp:
+    container_name: learn_csapp
+    build: ./csapp
+    volumes:
+      - ./csapp:/data
+    ports:
+      - 8080:8080
+    tty: true
+  edk2:
+    container_name: learn_edk2
+    build: ./uefi
+    volumes:
+      - ./uefi:/data
+    tty: true

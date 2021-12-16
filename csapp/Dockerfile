@@ -9,7 +9,7 @@ FROM alpine:latest
 WORKDIR /data
 # This command compiles your app using GCC, adjust for your source code
 RUN apk add build-base && apk add gcc make vim
-RUN make clean && make
+# RUN make
 
 
 # EXPOSE 8080

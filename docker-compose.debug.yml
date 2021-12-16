@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  edk2:
+    container_name: learn_edk2
+    build: ./uefi
+    volumes:
+      - ./uefi:/data/:rw
+    environment:
+      - EDK_TOOLS_PATH=/data/edk2/BaseTools
+    tty: true
