@@ -1,0 +1,17 @@
+[Defines]
+    INF_VERSION = 0x000010006
+    BASE_NAME = ProtocolPkg
+    FILE_GUID = b67d6410-e432-4b79-99f8-cb6c7cd0415e
+    MODULE_TYPE = UEFI_APPLICATION
+    VERSION_STRING = 0.1
+    ENTRY_POINT = UefiMain
+
+[Sources]
+    ProtocolPkg.c
+
+[Packages]
+    MdePkg/MdePkg.dec
+
+[LibraryClasses]
+    UefiApplicationEntryPoint
+    UefiLib

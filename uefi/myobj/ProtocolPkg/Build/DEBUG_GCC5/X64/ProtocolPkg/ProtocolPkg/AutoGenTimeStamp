@@ -1,0 +1,16 @@
+/data/edk2/MdePkg/Library/RegisterFilterLibNull/RegisterFilterLibNull.inf
+/data/edk2/ProtocolPkg/ProtocolPkg.c
+/data/edk2/MdePkg/Library/UefiBootServicesTableLib/UefiBootServicesTableLib.inf
+/data/edk2/MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
+/data/edk2/MdePkg/Library/BasePrintLib/BasePrintLib.inf
+/data/edk2/MdePkg/Library/UefiApplicationEntryPoint/UefiApplicationEntryPoint.inf
+/data/edk2/ProtocolPkg/ProtocolPkg.inf
+/data/edk2/ProtocolPkg/Build/DEBUG_GCC5/X64/ProtocolPkg/ProtocolPkg/DEBUG/AutoGen.h
+/data/edk2/MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf
+/data/edk2/MdePkg/Library/BaseLib/BaseLib.inf
+/data/edk2/MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
+/data/edk2/MdePkg/Library/BaseMemoryLib/BaseMemoryLib.inf
+/data/edk2/MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf
+/data/edk2/MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
+/data/edk2/MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.inf
+/data/edk2/MdePkg/Library/UefiLib/UefiLib.inf
