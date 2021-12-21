@@ -1,8 +1,7 @@
-#include "csapp.h"
-void main(int argc, char **argv)
-{
-    printf("get argc=%d,argv=%s \n", argc, argv[1]);
-    // ip反解析
+#include "../csapp.h"
+
+void main(int argc,char **argv){
+    printf("get argc=%d,argv=%s \n",argc,*argv);
     struct addrinfo *p, *listp, hints;
     char buf[MAXLINE];
     int rc, flags;
@@ -13,7 +12,7 @@ void main(int argc, char **argv)
     hints.ai_flags |= AI_ADDRCONFIG;
     if ((rc = getaddrinfo(argv[1], NULL, &hints, &listp)) != 0)
     {
-        fprintf(stderr, "error :%s", gai_strerror(rc));
+        fprintf(stderr, "error :%s\n", gai_strerror(rc));
         exit(-1);
     }
     flags = NI_NUMERICHOST;
@@ -24,7 +23,8 @@ void main(int argc, char **argv)
         {
             continue;
         }
-        if (connect(clientfd,p->ai_addr,p->ai_addrlen)!=-1){
+        if (connect(clientfd, p->ai_addr, p->ai_addrlen) != -1)
+        {
             break;
         }
         getnameinfo(p->ai_addr, p->ai_addrlen, buf, MAXLINE, NULL, 0, flags);
