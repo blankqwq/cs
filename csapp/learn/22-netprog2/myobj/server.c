@@ -47,7 +47,7 @@ int openListenFd(char *port)
 
 char *echo(int clientfd)
 {
-    while (fread(clientfd,))
+    while (fread(clientfd,N,))
     {
         /* code */
     }
