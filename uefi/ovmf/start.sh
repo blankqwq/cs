@@ -1,1 +1,1 @@
-qemu-system-x86_64 -pflash ./run/bios.bin -hda fat:rw:./run/hda-contents -net none
+qemu-system-x86_64 -pflash ./run/bios.bin -hda fat:rw:./run/hda-contents -net none -m 2048 -vga virtio
