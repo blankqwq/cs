@@ -49,12 +49,15 @@ int openListenFd(char *port)
 void *handle1(void *clientfd)
 {
     int connfd = *(int *)clientfd;
+    //自己回收
+    pthread_detach(pthread_self());
     char buf[MAXLINE],body[MAXLINE];
     // 写入http信息
       /* Print the HTTP response */
     sprintf(body,"<h1>hello http!</h1>");
     sprintf(buf, "HTTP/1.1 GET /\r\nContent-type: text/html\r\nContent-length: %d\r\n\r\n%s",(int)strlen(body),body);
     write(connfd, buf, strlen(buf));
+    close(connfd);
 }
 
 void sigchld_handler(int sig){
