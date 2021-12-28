@@ -1,0 +1,6 @@
+[submodule "uefi/myobj/ToyBootPkg"]
+	path = uefi/myobj/ToyBootPkg
+	url = git@github.com:blankqwq/ToyBoot.git
+[submodule "uefi/edk2"]
+	path = uefi/edk2
+	url = git@github.com:tianocore/edk2.git
