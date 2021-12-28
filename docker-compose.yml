@@ -15,3 +15,9 @@ services:
     volumes:
       - ./uefi:/data
     tty: true
+  os:
+    container_name: learn_os
+    build: ./os
+    volumes:
+      - ./os:/data
+    tty: true
