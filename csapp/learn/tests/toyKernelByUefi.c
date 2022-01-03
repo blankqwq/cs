@@ -1,22 +1,24 @@
-int main(){
-    char *bufferbase = (char *)(0x80000000);
-    for (unsigned long long i = 0; i < 0x0011C680; i++)
-    {
-       *bufferbase=0xff;
-       bufferbase+=1;
-       *bufferbase=0x18;
-       bufferbase+=1;
-       *bufferbase=0x67;
-       bufferbase+=1;
-       *bufferbase=0x9A;
-       bufferbase+=1;
+typedef struct BOOT_CONFIG
+{
+    unsigned long VideoBufferBase;
+    unsigned long VideoBufferSzie;
+    int data;
+}BOOT_CONFIG;
+
+
+void DxeVideo(unsigned long color,unsigned long buffer,unsigned long size){
+    unsigned int *bufferBase;
+    bufferBase = (unsigned int *)buffer;
+    for(unsigned long i = 0;i<size;i++){
+        *bufferBase = color;
+        bufferBase++;
     }
-    while (1)
-    {
-        /* code */
-    }
-    
-    return 0;
+}
+
+// 打印
+int _start(BOOT_CONFIG *t){
+    DxeVideo(0xff18679A,t->VideoBufferBase,t->VideoBufferSzie);
+    return 1;
 }
 
 
