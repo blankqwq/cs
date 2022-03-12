@@ -11,7 +11,7 @@ on:
     branches: [main]
 
 jobs:
-  build-all:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -25,7 +25,6 @@ jobs:
       - name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v1
-      - run: sed 's/\(PHP_VERSION=\).*/\1${{ matrix.php }}/g' .env.example > .env
       - name: Build Image
         run: docker-compose build
       - name: Push image

@@ -3,7 +3,7 @@ version: '3.4'
 services:
   csapp:
     container_name: learn_csapp
-    image: blankqwq/csapp-latest
+    image: blankqwq/csapp:1.0-latest
     build: ./csapp
     volumes:
       - ./csapp:/data
@@ -13,13 +13,13 @@ services:
   edk2:
     container_name: learn_edk2
     build: ./uefi
-    image: blankqwq/edk2-latest
+    image: blankqwq/edk2:1.0-latest
     volumes:
       - ./uefi:/data
     tty: true
   os:
     container_name: learn_os
-    image: blankqwq/os-latest
+    image: blankqwq/os:1.0-latest
     build: ./os
     volumes:
       - ./os:/data
