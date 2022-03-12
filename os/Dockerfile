@@ -8,7 +8,7 @@ FROM alpine:latest
 # and set that as the working location
 WORKDIR /data
 # This command compiles your app using GCC, adjust for your source code
-RUN apk add nasm
+RUN apk add nasm gcc make vim
 # RUN make
 
 
