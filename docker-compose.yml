@@ -24,3 +24,10 @@ services:
     volumes:
       - ./os:/data
     tty: true
+  golang: 
+    container_name: learn_go
+    image: blankqwq/learngo:1.0-latest
+    build: ./golang
+    volumes:
+      - ./golang:/data
+    tty: true
